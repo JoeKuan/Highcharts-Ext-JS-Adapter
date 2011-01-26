@@ -249,7 +249,7 @@ Ext.ux.HighChart = Ext.extend(Ext.BoxComponent, {
             }
 
             if (initAnim)
-              initAnim = (this.chartConfig.plotOptions.series !== undefined &&
+              initAnim = (this.chartConfig.plotOptions && this.chartConfig.plotOptions.series !== undefined &&
                           this.chartConfig.plotOptions.series.animation === false) ? false : true; 
 
             if (this.store && initAnim) {
