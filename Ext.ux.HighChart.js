@@ -55,7 +55,8 @@ Ext.ux.HighChart = Ext.extend(Ext.BoxComponent, {
     * @param {Boolean} append the serie. Defaults to true
     */
     addSeries: function(series, append) {
-        append = (append == null) ? true : false;
+        if (append == undefined || append == null)
+          append = true;
         var n = new Array(), c = new Array(), cls, serieObject;
         // Add empty data to the serie or just leave it normal. Bug in HighCharts?
         for (var i = 0; i < series.length; i++) {
