@@ -420,8 +420,8 @@ Ext.ux.HighChart = Ext.extend(Ext.BoxComponent, {
                 }
             }
 
-            var updateAnim = (this.chartConfig.animation === false) ? false : 
-                                (this.chartConfig.animation === undefined ? true : this.chartConfig.animation);
+            var updateAnim = (this.chartConfig.chart.animation === false) ? false : 
+                                (this.chartConfig.chart.animation === undefined ? true : this.chartConfig.chart.animation);
             // Update the series
             for (i = 0; i < seriesCount; i++) {
                 
